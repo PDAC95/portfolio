@@ -2,7 +2,7 @@ import AboutUs from "@/src/components/AboutUs";
 import Contact from "@/src/components/Contact";
 import HomeBanner from "@/src/components/HomeBanner";
 import Services from "@/src/components/Services";
-import { AlexioContext } from "@/src/Context";
+import { Context } from "@/src/Context";
 import Header from "@/src/Header";
 import Nav from "@/src/Nav";
 import { Fragment, useContext, useEffect } from "react";
@@ -20,7 +20,7 @@ const Index = () => {
     document.querySelector("body").classList.add("dark-body");
   }, []);
 
-  const { toggle } = useContext(AlexioContext);
+  const { toggle } = useContext(Context);
 
   return (
     <Fragment>

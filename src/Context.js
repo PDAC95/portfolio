@@ -1,7 +1,7 @@
 import { createContext, useCallback, useReducer } from "react";
 
 // Create Context
-const AlexioContext = createContext();
+consContext = createContext();
 
 // Type
 const type = {
@@ -36,7 +36,7 @@ const reducer = (state, action) => {
 };
 
 // Watson State
-const AlexioState = ({ children }) => {
+const State = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const changeNav = useCallback((value, toggleValue) => {
@@ -52,7 +52,7 @@ const AlexioState = ({ children }) => {
 
   const { nav, toggle } = state;
   return (
-    <AlexioContext.Provider
+    <Context.Provider
       value={{
         nav,
         changeNav,
@@ -60,9 +60,9 @@ const AlexioState = ({ children }) => {
       }}
     >
       {children}
-    </AlexioContext.Provider>
+    </Context.Provider>
   );
 };
 
-export default AlexioState;
-export { AlexioContext };
+export default State;
+export { Context };

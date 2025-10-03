@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { AlexioContext } from "./Context";
+import { Context } from "./Context";
 
 const Header = () => {
-  const { changeNav, nav, toggle } = useContext(AlexioContext);
+  const { changeNav, nav, toggle } = useContext(Context);
   return (
     <header className="header theme-bg">
       <div className="logo">Menu</div>

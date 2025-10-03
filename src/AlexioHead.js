@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const AlexioHead = () => {
+const Head = () => {
   return (
     <Head>
       <meta charSet="utf-8" />
@@ -45,4 +45,4 @@ const AlexioHead = () => {
     </Head>
   );
 };
-export default AlexioHead;
+export default Head;

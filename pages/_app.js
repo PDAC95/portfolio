@@ -1,5 +1,5 @@
-import AlexioHead from "@/src/AlexioHead";
-import AlexioState from "@/src/Context";
+import Head from "@/src/Head";
+import State from "@/src/Context";
 import Preloader from "@/src/Preloader";
 import "@/styles/globals.css";
 import { useEffect, useState } from "react";
@@ -17,10 +17,10 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <AlexioState>
-      <AlexioHead />
+    <State>
+      <Head />
       {!load && <Preloader />}
       {load1 && <Component {...pageProps} />}
-    </AlexioState>
+    </State>
   );
 }

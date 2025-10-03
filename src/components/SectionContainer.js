@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AlexioContext } from "../Context";
+import { Context } from "../Context";
 import SectionTitle from "./SectionTitle";
 
 const SectionContainer = ({
@@ -11,7 +11,7 @@ const SectionContainer = ({
   leftImage,
   leftImageTitle,
 }) => {
-  const { nav, changeNav } = useContext(AlexioContext);
+  const { nav, changeNav } = useContext(Context);
   const activePageClass = () => (name === nav ? "" : "page--inactive");
   return (
     <div

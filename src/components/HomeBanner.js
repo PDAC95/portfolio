@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { AlexioContext } from "../Context";
+import { Context } from "../Context";
 import TypingAnimation from "./TypingAnimation";
 
 const HomeBanner = () => {
-  const { nav, changeNav } = useContext(AlexioContext);
+  const { nav, changeNav } = useContext(Context);
   const activePageClass = () => ("home" === nav ? "" : "page--inactive");
   return (
     <div
@@ -24,16 +24,18 @@ const HomeBanner = () => {
                 <div className="v-center-box d-flex align-items-center">
                   <div className="home-text">
                     <h6 className="dark-color theme-after">Hello, There</h6>
-                    <h1 className="dark-color blue-after">I'm Patricio Duran</h1>
+                    <h1 className="dark-color blue-after">
+                      I'm Patricio Duran
+                    </h1>
                     <p>
                       I'm a <TypingAnimation />
                     </p>
                     <div className="btn-bar">
-                      <a 
-                        href="/static/Resume-Patricio-Duran.pdf" 
+                      <a
+                        href="/static/Resume-Patricio-Duran.pdf"
                         className="btn btn-theme"
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                        target="_blank"
+                        rel="noopener noreferrer"
                         download
                       >
                         Download CV
@@ -52,7 +54,12 @@ const HomeBanner = () => {
                       </a>
                     </li>{" "}
                     <li>
-                      <a className="web" href="https://www.ac95.ca/" target="_blank" rel="noopener noreferrer">
+                      <a
+                        className="web"
+                        href="https://www.ac95.ca/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <i className="fa fa-globe" />
                       </a>
                     </li>{" "}
